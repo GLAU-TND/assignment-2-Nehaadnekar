@@ -5,45 +5,40 @@
  *  Time: 7:06 PM
  */
 package problem5.student;
-// to store student information and properties
-
 public class Student {
-    private String name;
-    private int backLog;
-    private int appearingCount;
-//    private int backLogCounter = backLog-appearingCount;
+    int roll;
+    int a_count;
+    int backlog;
 
-    public Student(String name,int backLog,int appearingCount){
-        this.appearingCount=appearingCount;
-        this.backLog=backLog;
-        this.name = name;
+    public Student(int roll, int backlog,int a_count) {
+        this.roll = roll;
+        this.a_count = a_count;
+        this.backlog = backlog;
     }
 
-    public String getName() {
-        return name;
+    @Override
+    public String toString() {
+        return "Student{" +
+                "roll=" + roll +
+                ", backlog=" + backlog +
+                ", a_count=" + a_count +
+                '}';
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public int getRoll() {
+        return roll;
     }
 
-    public int getBackLog() {
-        return backLog;
+    public int getA_count() {
+        return a_count;
     }
 
-    public void setBackLog(int backLog) {
-        this.backLog = backLog;
-    }
-
-    public int getAppearingCount() {
-        return appearingCount;
-    }
-
-    public void setAppearingCount(int appearingCount) {
-        this.appearingCount = appearingCount;
-    }
-
-    public String toString(){
-        return getName()+" "+getBackLog()+" "+getAppearingCount();
+    public int getBacklog() {
+        return backlog;
     }
 }
+
+
+
+
+
